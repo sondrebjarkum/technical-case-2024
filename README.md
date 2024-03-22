@@ -57,13 +57,15 @@ npm run dev
 yarn dev
 ```
 
+Your task is to implement the dashboard page (`frontend/pages/dashboard/index.tsx`),
+which should display a dashboard made up of data fetched from the backend.
+You may choose what data to fetch and how to display it. You are also free to
+add other dummy data to the database if you see fit.
+Layout and design is completely up to you, but don't spend too much time on it.
 
-Your task is to implement the dashboard page, which should display a dashboard
-made up of data fetched from the backend (layout and design is completely up to
-you, but don't spend too much time on it).
-
-Besides the UI, you will need to implement a route in the backend that returns
-the data for the dashboard. The router (or controller) should validate the
+Besides the UI, you will need fetch data from the backend dummy database. 
+Implement a route in the backend that returns
+the data for the dashboard. The route should validate the
 request, get the data from the dummy database, and return the data to the
 frontend client.
 

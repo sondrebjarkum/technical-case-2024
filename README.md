@@ -14,26 +14,49 @@ You may choose whether to:
 
 ## The task: Implement a simple web application
 
-You are given the skeleton of a simple web application that should feature an
-activity dashboard.
+You are given a monorepo with the skeleton of a simple API (`backend/`) and 
+a web application (`frontend/`) that should feature an activity dashboard.
+
+The API is a simple Express server that serves a dummy database. The frontend
+is a Next.js application bootstrapped with `create-next-app`, using the [pages
+router](https://nextjs.org/docs/pages) to define the routes of the application.
 
 The application structure is as follows:
 
 ```
 frontend/
-    src/
-        components/
-            Hello.tsx
-        pages/
-            dashboard/
-                index.tsx // The main dashboard page
-            index.tsx
+    pages/
+        dashboard/
+            index.tsx // The main dashboard page should be implemented here
         _app.tsx
+        _document.tsx
+        index.tsx     // Root page
+    public/
+    styles/
 backend/
     src/
-        database.ts // Mock DB
-        app.ts      // Express server / entry point
+        database.ts // Dummy database
+        app.ts      // Express server and routes / entry point
 ```
+
+Start the backend dev server:
+```bash
+cd backend
+
+npm run dev
+# or
+yarn dev
+```
+
+Start the frontend dev server:
+```bash
+cd frontend
+
+npm run dev
+# or
+yarn dev
+```
+
 
 Your task is to implement the dashboard page, which should display a dashboard
 made up of data fetched from the backend (layout and design is completely up to
@@ -41,7 +64,7 @@ you, but don't spend too much time on it).
 
 Besides the UI, you will need to implement a route in the backend that returns
 the data for the dashboard. The router (or controller) should validate the
-request, get the data from the mock database, and return the data to the
+request, get the data from the dummy database, and return the data to the
 frontend client.
 
 ## Implementation

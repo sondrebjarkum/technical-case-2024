@@ -2,10 +2,10 @@ import express from 'express'
 import { db } from './database'
 
 const app = express()
-const port = 3000
+const port = 8000
 
 app.get('/', (_req, res) => {
-  res.send('Hello World!')
+  res.status(200).json({ message: 'Hello, World!' })
 })
 
 app.get('/users', (_req, res) => {

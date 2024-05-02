@@ -39,8 +39,8 @@ Start the backend dev server:
 ```bash
 cd backend
 
-npm run dev
-# or
+yarn install
+
 yarn dev
 ```
 
@@ -48,8 +48,8 @@ Start the frontend dev server:
 ```bash
 cd frontend
 
-npm run dev
-# or
+yarn install
+
 yarn dev
 ```
 

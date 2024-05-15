@@ -1,4 +1,3 @@
-import eventEmitter from '../emitter';
 import { User } from '../models/user';
 import { Repository } from './base';
 
